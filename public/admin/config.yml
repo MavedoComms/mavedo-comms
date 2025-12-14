@@ -1,0 +1,151 @@
+backend:
+  name: github
+  repo: jedidja-cto/mavedo-communications
+  branch: main
+
+publish_mode: simple
+local_backend: true
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: site
+    label: Site Settings
+    files:
+      - file: src/content/site.json
+        name: site
+        label: Site
+        fields:
+          - { label: Brand Name, name: brandName, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Email, name: email, widget: string }
+              - { label: WhatsApp, name: whatsapp, widget: string }
+              - { label: Location, name: location, widget: string }
+              - label: Social
+                name: social
+                widget: object
+                fields:
+                  - { label: Instagram, name: instagram, widget: string, required: false }
+                  - { label: LinkedIn, name: linkedin, widget: string, required: false }
+                  - { label: Facebook, name: facebook, widget: string, required: false }
+
+  - name: home
+    label: Home Page
+    files:
+      - file: src/content/home.json
+        name: home
+        label: Home Content
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text }
+              - { label: Image, name: image, widget: image }
+              - label: CTA Primary
+                name: ctaPrimary
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+              - label: CTA Secondary
+                name: ctaSecondary
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+
+  - name: packages
+    label: Starter Packs
+    files:
+      - file: src/content/packages.json
+        name: packages
+        label: Packages
+        fields:
+          - label: Packages
+            name: packages
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Price, name: price, widget: string }
+              - { label: Timeline, name: timeline, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Features
+                name: features
+                widget: list
+                field: { label: Feature, name: feature, widget: string }
+              - { label: Outcome, name: outcome, widget: string }
+              - { label: Popular, name: popular, widget: boolean, default: false, required: false }
+
+  - name: testimonials
+    label: Testimonials
+    files:
+      - file: src/content/testimonials.json
+        name: testimonials
+        label: Testimonials Content
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Primary Image, name: primaryImage, widget: image, required: false }
+          - { label: Secondary Image, name: secondaryImage, widget: image, required: false }
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Quote, name: quote, widget: text }
+              - { label: Author, name: author, widget: string }
+              - { label: Metric, name: metric, widget: string, required: false }
+
+  - name: faq
+    label: FAQs
+    files:
+      - file: src/content/faq.json
+        name: faqs
+        label: FAQ List
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Question, name: q, widget: string }
+              - { label: Answer, name: a, widget: text }
+
+  - name: process
+    label: Process
+    files:
+      - file: src/content/process.json
+        name: process
+        label: Process Content
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - label: Steps
+            name: steps
+            widget: list
+            fields:
+              - { label: Number, name: number, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image }
+
+  - name: coreValues
+    label: Core Values
+    files:
+      - file: src/content/coreValues.json
+        name: coreValues
+        label: Core Values
+        fields:
+          - label: Values
+            name: values
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Background Color, name: bg, widget: string }
+              - { label: Text Color, name: text, widget: string }

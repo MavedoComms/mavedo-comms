@@ -1,0 +1,23 @@
+{
+  "heading": "Client Testimonials",
+  "intro": "Real results from real teams. Here's a snapshot of outcomes after partnering with Mavedo Communications.",
+  "primaryImage": "/images/testimonials_1.jpg",
+  "secondaryImage": "/images/tesimonial_2.jpeg",
+  "items": [
+    {
+      "quote": "Mavedo transformed our social presence. Engagement is up and we're finally getting qualified inquiries from social media.",
+      "author": "Head of Marketing, Fintech Startup",
+      "metric": "Qualified leads up 3x"
+    },
+    {
+      "quote": "They moved fast and delivered a launch-ready strategy in under a week. Clear communication and strong creative.",
+      "author": "Founder, E-commerce Brand",
+      "metric": "First-week sales up 28%"
+    },
+    {
+      "quote": "Our content now tells a consistent story across platforms. The brand feels cohesive and conversions improved.",
+      "author": "Operations Lead, SaaS Company",
+      "metric": "Conversion rate +18%"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "heading": "Our Process",
+  "intro": "We've refined our approach to deliver maximum value in minimum time.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Discover",
+      "description": "We learn about your business, goals, and audience through a focused consultation.",
+      "image": "/images/process_discover.jpeg"
+    },
+    {
+      "number": "02",
+      "title": "Design & Build",
+      "description": "We design a clear system and build the deliverables with usability and performance in mind.",
+      "image": "/images/process_design.jpg"
+    },
+    {
+      "number": "03",
+      "title": "Review & Refine",
+      "description": "We iterate with structured feedback windows to polish details and align on results.",
+      "image": "/images/process_define.jpg"
+    },
+    {
+      "number": "04",
+      "title": "Launch & Support",
+      "description": "We ship, measure, and provide support so your team can operate confidently.",
+      "image": "/images/process_build.jpg"
+    }
+  ]
+}

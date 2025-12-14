@@ -1,0 +1,44 @@
+{
+  "packages": [
+    {
+      "name": "Website Development",
+      "price": "Custom",
+      "timeline": "Varies",
+      "description": "Responsive websites built for clarity, conversion, and easy editing.",
+      "features": [
+        "Discovery call + requirements",
+        "Design system & components",
+        "SEO-friendly, analytics-ready",
+        "Training & handoff"
+      ],
+      "outcome": "A clear, performant website your team can operate",
+      "popular": true
+    },
+    {
+      "name": "Social Media Management",
+      "price": "Custom",
+      "timeline": "Monthly",
+      "description": "Content planning, posting, and measurement across your key platforms.",
+      "features": [
+        "Content calendar",
+        "Design templates",
+        "Posting & community",
+        "Monthly reporting"
+      ],
+      "outcome": "Consistent presence that grows audience and engagement"
+    },
+    {
+      "name": "Brand & Creative Services",
+      "price": "Custom",
+      "timeline": "Varies",
+      "description": "Logo, identity systems, and marketing collateral aligned to your goals.",
+      "features": [
+        "Logo + variations",
+        "Brand guidelines",
+        "Pitch deck & collateral",
+        "Templates & assets"
+      ],
+      "outcome": "A cohesive brand system that builds trust"
+    }
+  ]
+}
