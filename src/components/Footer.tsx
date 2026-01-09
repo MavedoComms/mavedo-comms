@@ -40,6 +40,7 @@ export default function Footer() {
               <Link to="/services">Pricing</Link>
               {/* <Link to="/portfolio">Portfolio</Link> */}
               <Link to="/contact">Contact</Link>
+              <a href="/admin" target="_blank" rel="noopener noreferrer">Admin</a>
             </nav>
           </div>
           

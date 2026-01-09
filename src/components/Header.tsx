@@ -6,9 +6,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = [
     { to: "/", label: "Home", end: true },
-    { to: "/about", label: "About" },
-    { to: "/services", label: "Pricing" },
-    { to: "/contact", label: "Contact" },
+    { to: "/about", label: "About", end: false },
+    { to: "/services", label: "Pricing", end: false },
+    { to: "/contact", label: "Contact", end: false },
   ];
   return (
     <header className="navbar site-header">
@@ -19,7 +19,7 @@ export default function Header() {
         </Link>
         <nav className="nav" aria-label="Primary">
           {navLinks.map((link) => (
-            <NavLink key={link.to} to={link.to} end={link.end as any} className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink key={link.to} to={link.to} end={link.end} className={({ isActive }) => (isActive ? "active" : "")}>
               {link.label}
             </NavLink>
           ))}
@@ -46,7 +46,7 @@ export default function Header() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                end={link.end as any}
+                end={link.end}
                 className={({ isActive }) => (isActive ? "active" : "")}
                 onClick={() => setOpen(false)}
               >

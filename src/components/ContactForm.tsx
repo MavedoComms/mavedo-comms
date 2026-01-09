@@ -62,7 +62,7 @@ Sent from Mavedo Communications website`;
         setIsSubmitting(false);
       }, 1000);
 
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again or contact us directly.");
       setIsSubmitting(false);
     }
