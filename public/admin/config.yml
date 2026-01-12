@@ -83,25 +83,6 @@ collections:
               - { label: Outcome, name: outcome, widget: string }
               - { label: Popular, name: popular, widget: boolean, default: false, required: false }
 
-  - name: testimonials
-    label: Testimonials
-    files:
-      - file: src/content/testimonials.json
-        name: testimonials
-        label: Testimonials Content
-        fields:
-          - { label: Heading, name: heading, widget: string }
-          - { label: Intro, name: intro, widget: text }
-          - { label: Primary Image, name: primaryImage, widget: image, required: false }
-          - { label: Secondary Image, name: secondaryImage, widget: image, required: false }
-          - label: Items
-            name: items
-            widget: list
-            fields:
-              - { label: Quote, name: quote, widget: text }
-              - { label: Author, name: author, widget: string }
-              - { label: Metric, name: metric, widget: string, required: false }
-
   - name: faq
     label: FAQs
     files:

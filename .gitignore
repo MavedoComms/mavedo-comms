@@ -30,10 +30,12 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Firebase
+# Firebase (sensitive deployment files)
 .firebase/
 firebase-debug.log
+.firebaserc
 .firebaserc.local
+firebase.json
 
 # Testing
 coverage/
@@ -46,3 +48,27 @@ coverage/
 *.pfx
 secrets.json
 service-account*.json
+
+# Development artifacts (Kiro specs)
+.kiro/
+
+# Configuration files (can be regenerated)
+eslint.config.js
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

@@ -67,20 +67,6 @@ const validatePackages = () => {
   }
 }
 
-const validateTestimonials = () => {
-  const t = readJson('testimonials.json')
-  assert(isString(t.heading), 'testimonials.heading is required')
-  assert(isString(t.intro), 'testimonials.intro is required')
-  if (t.primaryImage) assert(isString(t.primaryImage), 'testimonials.primaryImage must be string')
-  if (t.secondaryImage) assert(isString(t.secondaryImage), 'testimonials.secondaryImage must be string')
-  assert(Array.isArray(t.items), 'testimonials.items must be an array')
-  for (const item of t.items) {
-    assert(isString(item.quote), 'testimonials.items[].quote is required')
-    assert(isString(item.author), 'testimonials.items[].author is required')
-    if (item.metric) assert(isString(item.metric), 'testimonials.items[].metric must be string')
-  }
-}
-
 const validateFaq = () => {
   const faq = readJson('faq.json')
   assert(Array.isArray(faq.items), 'faq.items must be an array')
@@ -119,11 +105,10 @@ try {
   validateSite()
   validateHome()
   validatePackages()
-  validateTestimonials()
   validateFaq()
   validateCoreValues()
   validateProcess()
-  console.log('Content validation passed')
+  // Content validation passed - no console output needed
 } catch (e) {
   console.error(`Content validation failed: ${e.message}`)
   process.exit(1)

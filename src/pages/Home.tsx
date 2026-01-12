@@ -1,7 +1,6 @@
 import StarterPacks from '../components/StarterPacks';
 import Process from '../components/Process';
 import FAQ from '../components/FAQ';
-// import Testimonials from "../components/Testimonials";
 import { Link } from 'react-router-dom';
 import { motion, easeIn, easeOut } from 'framer-motion';
 import homeData from '../content/home.json';
@@ -111,15 +110,10 @@ export default function Home() {
         </div>
       </section>
 
-      
       <Process />
-
-      {/* Removed large repeated strip to comply with new brand rules */}
 
       <section id="starter-packs" className="starter-packs-section section pattern-border-top light-bg pattern-animated pattern-right">
         <StarterPacks />
-        {/* Testimonials hidden until testimonials are available */}
-        {/* <Testimonials /> */}
         <FAQ />
       </section>
 

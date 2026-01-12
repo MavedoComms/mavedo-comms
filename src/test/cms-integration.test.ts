@@ -11,7 +11,6 @@ describe('CMS Integration Tests', () => {
   const adminPath = join(distPath, 'admin')
 
   it('should have CMS interface that loads without errors', () => {
-    // Test that the admin index.html contains all necessary CMS components
     const adminIndexPath = join(adminPath, 'index.html')
     const htmlContent = readFileSync(adminIndexPath, 'utf-8')
     
@@ -29,21 +28,19 @@ describe('CMS Integration Tests', () => {
   })
 
   it('should have all configured collections accessible', () => {
-    // Test that config.yml contains all expected collections
     const configPath = join(adminPath, 'config.yml')
     const yamlContent = readFileSync(configPath, 'utf-8')
     
     // Verify backend configuration
     expect(yamlContent).toContain('backend:')
     expect(yamlContent).toContain('name: github')
-    expect(yamlContent).toContain('repo: jedidja-cto/mavedo-communications')
+    expect(yamlContent).toContain('repo: MavedoComms/mavedo-comms')
     
     // Verify all expected collections are present
     const expectedCollections = [
       'site',
       'home', 
       'packages',
-      'testimonials',
       'faq',
       'process',
       'coreValues'
