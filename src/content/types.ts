@@ -4,7 +4,7 @@ export interface SiteContent {
   description?: string
   contact: {
     email: string
-    whatsapp: string
+    whatsapp?: string
     location: string
     social?: {
       instagram?: string

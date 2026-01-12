@@ -37,7 +37,7 @@ firebase-debug.log
 .firebaserc.local
 firebase.json
 
-# Testing
+# Testing coverage reports (keep test files visible)
 coverage/
 .nyc_output/
 
@@ -48,16 +48,6 @@ coverage/
 *.pfx
 secrets.json
 service-account*.json
-
-# Development artifacts (Kiro specs)
-.kiro/
-
-# Configuration files (can be regenerated)
-eslint.config.js
-
-# IDE and editor files
-.vscode/
-.idea/
 
 # OS generated files
 .DS_Store

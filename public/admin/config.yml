@@ -24,7 +24,7 @@ collections:
             widget: object
             fields:
               - { label: Email, name: email, widget: string }
-              - { label: WhatsApp, name: whatsapp, widget: string }
+              - { label: WhatsApp, name: whatsapp, widget: string, required: false }
               - { label: Location, name: location, widget: string }
               - label: Social
                 name: social

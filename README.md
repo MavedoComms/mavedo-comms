@@ -1,4 +1,4 @@
-# 🚀 Mavedo Communications
+# Mavedo Communications
 
 [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -15,50 +15,50 @@
 
 A modern, high-performance website for **Mavedo Communications** - a Namibia-based marketing and branding agency that helps startups and small businesses access professional, cost-effective creative services without breaking the budget.
 
-## 🌟 About Mavedo Communications
+## About Mavedo Communications
 
 Mavedo Communications is a full-service creative agency based in **Windhoek, Namibia**, specializing in helping startups build brands that stand out in competitive markets. We believe that every business, regardless of size or budget, deserves access to professional creative services.
 
-### 🎯 Our Services
+### Our Services
 
-- **🎨 Brand Strategy & Identity Design**
+- **Brand Strategy & Identity Design**
   - Logo design and brand guidelines
   - Color palettes and typography systems
   - Brand positioning and messaging
 
-- **📱 Digital Marketing & Social Media**
+- **Digital Marketing & Social Media**
   - Social media strategy and management
   - Content creation and copywriting
   - Digital advertising campaigns
 
-- **💻 Web Design & Development**
+- **Web Design & Development**
   - Responsive website design
   - E-commerce solutions
   - SEO optimization
 
-- **📊 Marketing Strategy & Campaigns**
+- **Marketing Strategy & Campaigns**
   - Campaign planning and execution
   - Performance tracking and analytics
   - Growth strategy consulting
 
-### 🌍 Our Mission
+### Our Mission
 
 We work with ambitious entrepreneurs who are building with intention, providing flexible service packages that scale with your business growth.
 
-## ✨ Website Features
+## Website Features
 
-- 🎨 **Modern Design System** - Clean, professional interface with custom branding
-- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
-- ⚡ **Lightning Fast Performance** - Built with Vite for optimal loading speeds
-- 🔍 **SEO Optimized** - Structured for maximum search engine visibility
-- 📊 **Analytics Integration** - Built-in tracking and performance monitoring
-- 🎭 **Smooth Animations** - Enhanced user experience with Framer Motion
-- 🧪 **Comprehensive Testing** - Full test coverage with Vitest and Testing Library
-- 📝 **Content Management** - Easy content updates with structured JSON data
-- 🔒 **Security First** - Secure hosting and best practices implementation
-- ♿ **Accessibility Compliant** - WCAG guidelines adherence
+- **Modern Design System** - Clean, professional interface with custom branding
+- **Fully Responsive** - Optimized for all devices and screen sizes
+- **Lightning Fast Performance** - Built with Vite for optimal loading speeds
+- **SEO Optimized** - Structured for maximum search engine visibility
+- **Analytics Integration** - Built-in tracking and performance monitoring
+- **Smooth Animations** - Enhanced user experience with Framer Motion
+- **Comprehensive Testing** - Full test coverage with Vitest and Testing Library
+- **Content Management** - Easy content updates with structured JSON data
+- **Security First** - Secure hosting and best practices implementation
+- **Accessibility Compliant** - WCAG guidelines adherence
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend Framework
 - **React 19.1.1** - Latest React with concurrent features
@@ -85,7 +85,7 @@ We work with ambitious entrepreneurs who are building with intention, providing 
 - **GitHub Actions** - Automated CI/CD pipeline
 - **Content Validation** - Pre-build content integrity checks
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js 18+** (LTS recommended)
@@ -121,7 +121,7 @@ We work with ambitious entrepreneurs who are building with intention, providing 
 
 The development server includes hot module replacement (HMR) for instant updates during development.
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command | Description | Usage |
 |---------|-------------|-------|
@@ -148,7 +148,7 @@ npm run build && npm run preview
 npm run lint
 ```
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 mavedo-communications/
@@ -201,7 +201,7 @@ mavedo-communications/
 └── 📄 README.md               # This file
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 ```css
@@ -248,16 +248,16 @@ mavedo-communications/
 --space-20: 5rem;     /* 80px */
 ```
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 The project maintains comprehensive test coverage across multiple layers:
 
 ### Test Types
-- **🔧 Unit Tests** - Individual component functionality
-- **🔗 Integration Tests** - Component interaction workflows
-- **📦 Static Asset Tests** - Resource availability validation
-- **📝 CMS Integration Tests** - Content management functionality
-- **🚀 Deployment Tests** - Firebase routing validation
+- **Unit Tests** - Individual component functionality
+- **Integration Tests** - Component interaction workflows
+- **Static Asset Tests** - Resource availability validation
+- **CMS Integration Tests** - Content management functionality
+- **Deployment Tests** - Firebase routing validation
 
 ### Test Coverage Areas
 - ✅ Component rendering and props
@@ -284,7 +284,7 @@ npm run test -- --coverage
 npm run test Footer.test.tsx
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Automated Deployment
 The site automatically deploys to Firebase Hosting via GitHub Actions on every push to the `main` branch.
@@ -306,42 +306,41 @@ firebase hosting:channel:deploy preview
 2. Login to Firebase: `firebase login`
 3. Initialize project: `firebase init hosting`
 
-## 📊 Performance Metrics
+## Performance Metrics
 
-- **⚡ Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **🏃‍♂️ First Contentful Paint**: < 1.5s
-- **🎯 Largest Contentful Paint**: < 2.5s
-- **📱 Mobile Performance**: Optimized for 3G networks
-- **♿ Accessibility**: WCAG 2.1 AA compliant
+- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Mobile Performance**: Optimized for 3G networks
+- **Accessibility**: WCAG 2.1 AA compliant
 
-## 🔒 Security Features
+## Security Features
 
-- **🛡️ Content Security Policy** - XSS protection
-- **🔐 HTTPS Enforcement** - Secure data transmission
-- **🚫 No Sensitive Data Exposure** - Environment variables for secrets
-- **🔍 Dependency Scanning** - Regular security audits
-- **📝 Input Validation** - Form data sanitization
+- **Content Security Policy** - XSS protection
+- **HTTPS Enforcement** - Secure data transmission
+- **No Sensitive Data Exposure** - Environment variables for secrets
+- **Dependency Scanning** - Regular security audits
+- **Input Validation** - Form data sanitization
 
-## 📞 Contact & Support
+## Contact & Support
 
 ### Business Inquiries
-- **🌐 Website**: [mavedo.na](https://mavedo.na)
-- **📧 Email**: hello@mavedo.na
-- **📱 WhatsApp**: +264 81 123 4567
-- **📍 Location**: Windhoek, Namibia
+- **Website**: [mavedo.na](https://mavedo.na)
+- **Email**: hello@mavedo.na
+- **Location**: Windhoek, Namibia
 
 ### Social Media
-- **💼 LinkedIn**: [Mavedo Communications](https://www.linkedin.com/company/mavedo-comms)
-- **🐦 X (Twitter)**: [@MavedoComms](https://x.com/MavedoComms)
-- **📘 Facebook**: [Mavedo Communications](https://www.facebook.com/people/Mavedo-Communications/61581663933468/)
-- **📸 Instagram**: [@mavedocomms](https://www.instagram.com/mavedocomms/)
+- **LinkedIn**: [Mavedo Communications](https://www.linkedin.com/company/mavedo-comms)
+- **X (Twitter)**: [@MavedoComms](https://x.com/MavedoComms)
+- **Facebook**: [Mavedo Communications](https://www.facebook.com/people/Mavedo-Communications/61581663933468/)
+- **Instagram**: [@mavedocomms](https://www.instagram.com/mavedocomms/)
 
 ### Technical Support
 For technical issues or development questions:
-- **📧 Email**: tech@mavedo.na
-- **🐛 Issues**: [GitHub Issues](https://github.com/your-username/mavedo-communications/issues)
+- **Email**: tech@mavedo.na
+- **Issues**: [GitHub Issues](https://github.com/your-username/mavedo-communications/issues)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Please read our contributing guidelines:
 
@@ -357,13 +356,13 @@ We welcome contributions from the community! Please read our contributing guidel
 - Use semantic commit messages
 - Update documentation for new features
 
-## 📄 License
+## License
 
 © 2025 Mavedo Communications. All rights reserved.
 
 This project is proprietary software. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited without explicit written permission from Mavedo Communications.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **React Team** - For the amazing framework
 - **Vite Team** - For the lightning-fast build tool
@@ -373,7 +372,7 @@ This project is proprietary software. Unauthorized copying, modification, distri
 ---
 
 <div align="center">
-  <strong>Built with ❤️ in Namibia 🇳🇦</strong>
+  <strong>Built with love in Namibia</strong>
   <br>
   <em>Empowering startups, one brand at a time</em>
 </div>

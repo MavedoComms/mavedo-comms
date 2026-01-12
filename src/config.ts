@@ -1,19 +1,22 @@
 import site from './content/site.json';
+import type { SiteContent } from './content/types';
+
+const siteData = site as SiteContent;
 
 export const CONTACT = {
-  email: site.contact?.email ?? "hello@mavedo.na",
-  whatsapp: site.contact?.whatsapp ?? "+264811234567",
-  location: site.contact?.location ?? "Windhoek, Namibia",
+  email: siteData.contact?.email ?? "hello@mavedo.na",
+  whatsapp: siteData.contact?.whatsapp ?? "",
+  location: siteData.contact?.location ?? "Windhoek, Namibia",
   social: {
-    instagram: site.contact?.social?.instagram ?? "",
-    linkedin: site.contact?.social?.linkedin ?? "",
-    facebook: site.contact?.social?.facebook ?? "",
+    instagram: siteData.contact?.social?.instagram ?? "",
+    linkedin: siteData.contact?.social?.linkedin ?? "",
+    facebook: siteData.contact?.social?.facebook ?? "",
   },
 };
 
 export const BRAND = {
-  name: site.brandName ?? "Mavedo Communications",
-  tagline: site.tagline ?? "Affordable creative power for ambitious startups",
+  name: siteData.brandName ?? "Mavedo Communications",
+  tagline: siteData.tagline ?? "Affordable creative power for ambitious startups",
   description:
-    site.description ?? "A Namibia-based marketing and branding agency helping startups and small businesses access high-quality, cost-effective creative services.",
+    siteData.description ?? "A Namibia-based marketing and branding agency helping startups and small businesses access high-quality, cost-effective creative services.",
 };

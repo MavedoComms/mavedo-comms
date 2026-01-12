@@ -26,7 +26,7 @@ const validateSite = () => {
   assert(isOptionalString(site.description), 'site.description must be a string if present')
   assert(site.contact && typeof site.contact === 'object', 'site.contact is required')
   assert(isString(site.contact.email), 'site.contact.email is required')
-  assert(isString(site.contact.whatsapp), 'site.contact.whatsapp is required')
+  assert(isOptionalString(site.contact.whatsapp), 'site.contact.whatsapp must be string if present')
   assert(isString(site.contact.location), 'site.contact.location is required')
   if (site.contact.social) {
     assert(typeof site.contact.social === 'object', 'site.contact.social must be an object')
