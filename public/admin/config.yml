@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jedidja-cto/mavedo-communications
+  repo: MavedoComms/mavedo-comms
   branch: main
 
 publish_mode: simple
