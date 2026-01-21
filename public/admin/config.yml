@@ -4,7 +4,6 @@ backend:
   branch: main
 
 publish_mode: simple
-local_backend: true
 media_folder: public/images
 public_folder: /images
 
@@ -79,7 +78,7 @@ collections:
               - label: Features
                 name: features
                 widget: list
-                field: { label: Feature, name: feature, widget: string }
+                field: { label: Feature, widget: string }
               - { label: Outcome, name: outcome, widget: string }
               - { label: Popular, name: popular, widget: boolean, default: false, required: false }
 
