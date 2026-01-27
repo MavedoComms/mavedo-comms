@@ -2,8 +2,8 @@
   "hero": {
     "title": "Build a Brand That Works as Hard as You Do",
     "subtitle": "We help startups build brands that stand out — without breaking the budget. From strategy to social media, we offer affordable, flexible creative services designed for entrepreneurs who are building with intention.",
-    "image": "/images/hero_collaboration.jpeg",
+    "image": "/images/hero_collaboration.jpg",
     "ctaPrimary": { "label": "Start a Project", "href": "/contact#contact" },
-    "ctaSecondary": { "label": "View Packages", "href": "#starter-packs" }
+    "ctaSecondary": { "label": "View Packages", "href": "/services" }
   }
 }

@@ -209,7 +209,8 @@ html {
   overflow: hidden;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-  min-height: 70vh; /* min-h-[70vh] */
+  aspect-ratio: 4 / 3;
+  max-height: 520px;
 }
 .hero-image {
   width: 100%;
@@ -441,25 +442,9 @@ html {
   background-color: var(--color-primary);
 }
 
-/* Hero corner overlay: subtle, non-intrusive */
+/* Hero layout tweaks (pattern removed to keep image clean) */
 .hero {
   position: relative;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35%; /* ~35% of section width */
-  height: 100%;
-  pointer-events: none;
-  z-index: 0; /* keep below content */
-  opacity: 0.1; /* 8–12% */
-  filter: blur(1px); /* slight blur optional */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' fill='none'/><polygon points='0,100 60,40 60,70 200,70 200,130 60,130 60,160' fill='%23DDA003'/><polygon points='0,160 40,120 40,135 160,135 160,165 40,165 40,180' fill='%237A002E' opacity='0.85'/></svg>");
 }
 
 /* Testimonials header: masked subtle progress cue */
@@ -480,7 +465,7 @@ html {
 .btn:active { transform: translateY(1px); }
 
 .btn-primary { background: var(--color-accent); color: #FFFFFF; }
-.btn-primary:hover { background-color: #002642; color: #E59500; box-shadow: var(--shadow-md); transform: scale(1.03); }
+.btn-primary:hover { background-color: #002642; color: #FFFFFF; box-shadow: var(--shadow-md); transform: scale(1.03); }
 
 .btn-secondary { background: var(--color-primary); color: #FFFFFF; }
 .btn-secondary:hover { filter: brightness(1.08); box-shadow: var(--shadow-md); }
@@ -501,6 +486,7 @@ html {
 }
 
 /* Services Grid with 3D Flip Animation */
+/* Services grid: 3 cards per row on desktop, then 2, then 1 on mobile */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -520,7 +506,8 @@ html {
   transition: transform 0.6s ease-in-out;
 }
 
-.service-card-flip:hover {
+.service-card-flip:hover,
+.service-card-flip.flipped {
   transform: rotateY(180deg);
 }
 
@@ -588,39 +575,34 @@ html {
 }
 
 .service-icon {
-  width: 48px; 
-  height: 48px; 
-  border-radius: 12px; 
-  background: #E59500; 
-  opacity: 0.85;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #E59500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
+  flex-shrink: 0;
+}
+.service-icon svg {
+  flex-shrink: 0;
 }
 
 /* Mobile responsive for service cards */
 @media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .service-card-flip {
     height: 280px;
   }
-  
-  .service-card-flip:hover {
-    transform: none;
-  }
-  
   .service-card-front,
   .service-card-back {
     padding: 1.5rem;
   }
-  
-  /* On mobile, show back content on tap/click */
-  .service-card-flip:active .service-card-front,
-  .service-card-flip:focus .service-card-front {
-    opacity: 0;
-  }
-  
-  .service-card-flip:active .service-card-back,
-  .service-card-flip:focus .service-card-back {
-    z-index: 3;
-  }
+  /* Flip on tap is handled by .flipped class (see Home.tsx onClick) */
 }
 
 /* Comprehensive responsive breakpoints */
@@ -732,11 +714,12 @@ html {
   }
 }
 
-@media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* Single column on small mobile */
 @media (max-width: 640px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
 }
 
 /* FAQ Animations */
@@ -754,13 +737,44 @@ html {
 
 /* Final CTA */
 .final-cta {
-  text-align: center;
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xl) 0;
 }
-.final-cta p { 
-  font-size: 1.125rem; 
-  color: #1B1B1B; 
-  margin-bottom: var(--space-md); 
+.final-cta-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: var(--space-lg);
+  align-items: center;
+}
+.final-cta-content h2 {
+  margin-bottom: 1rem;
+}
+.final-cta-content p {
+  font-size: 0.975rem;
+  max-width: 520px;
+}
+.final-cta-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.final-cta-image {
+  width: 100%;
+}
+.final-cta-img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 768px) {
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+  }
+  .final-cta-img-el {
+    max-height: 280px;
+  }
 }
 
 /* Footer Improvements */
@@ -862,10 +876,19 @@ html {
 }
 
 .package-price .price {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #002642;
   line-height: 1;
+}
+
+.price-amount {
+  font-size: 1em;
+}
+
+.price-unit {
+  font-size: 0.7em;
+  margin-left: 4px;
 }
 
 .package-price .timeline {

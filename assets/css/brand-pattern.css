@@ -15,18 +15,7 @@
 }
 
 .pattern-border-top::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 24px; /* 24–32px as requested */
-  background-repeat: repeat-x;
-  background-size: contain; /* scale 45–60% via SVG viewbox and internal sizing */
-  opacity: 0.12; /* default subtle overlay; overridden by bg variants below */
-  filter: saturate(0.9);
-  animation: slowSlide 10s linear infinite; /* 2–5px slow horizontal motion */
-  z-index: 1;
+  content: none;
 }
 
 /* Corner Texture Masks */
@@ -64,47 +53,30 @@
 
 /* Dark navy background with Gamboge pattern */
 .corner-texture.dark-bg::after {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><rect width='120' height='60' fill='none'/><polygon points='0,30 28,8 28,18 60,18 60,42 28,42 28,52' fill='%23E59500'/><polygon points='60,30 88,8 88,18 120,18 120,42 88,42 88,52' fill='%23E59500'/></svg>");
-  opacity: 0.10; /* 10% opacity */
-  filter: saturate(0.9);
+  background-image: none;
 }
 
 /* White Smoke/Light background with Claret pattern */
 .corner-texture.light-bg::after {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><rect width='120' height='60' fill='none'/><polygon points='0,30 28,8 28,18 60,18 60,42 28,42 28,52' fill='%23840032'/><polygon points='60,30 88,8 88,18 120,18 120,42 88,42 88,52' fill='%23840032'/></svg>");
-  opacity: 0.12; /* 12% opacity */
-  filter: saturate(0.9);
+  background-image: none;
 }
 
 /* Image background with blend multiply, masked corners only */
 .corner-texture.image-bg::after {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><rect width='120' height='60' fill='none'/><polygon points='0,30 28,8 28,18 60,18 60,42 28,42 28,52' fill='%23E59500'/><polygon points='60,30 88,8 88,18 120,18 120,42 88,42 88,52' fill='%23E59500'/></svg>");
-  opacity: 0.06; /* 6% opacity on images */
-  mix-blend-mode: multiply;
-  filter: saturate(0.9);
+  background-image: none;
 }
 
 /* Alternating pattern for corner textures */
 .corner-texture.alternating::after {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 60'><rect width='240' height='60' fill='none'/><polygon points='0,30 28,8 28,18 60,18 60,42 28,42 28,52' fill='%23DDA003'/><polygon points='60,30 88,8 88,18 120,18 120,42 88,42 88,52' fill='%23840032'/><polygon points='120,30 148,8 148,18 180,18 180,42 148,42 148,52' fill='%23DDA003'/><polygon points='180,30 208,8 208,18 240,18 240,42 208,42 208,52' fill='%23840032'/></svg>");
-  opacity: 0.12; /* 12% opacity */
+  background-image: none;
 }
 
-/* Heading diagonal accent: subtle, clipped, non-intrusive */
+/* Heading accent: currently disabled (no decorative bar) */
 .heading-accent {
   position: relative;
 }
 .heading-accent::after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 50%;
-  width: 80px;
-  height: 8px;
-  transform: translateY(-50%) skewX(-18deg);
-  background-image: linear-gradient(90deg, rgba(229, 149, 0, 0.2), rgba(132, 0, 50, 0.2));
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-  z-index: -1;
+  content: none;
 }
 
 /* FAQ Container Cut Masks */
@@ -114,18 +86,7 @@
 }
 
 .faq-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 15%;
-  height: 15%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><rect width='120' height='60' fill='none'/><polygon points='0,30 28,8 28,18 60,18 60,42 28,42 28,52' fill='%23DDA003'/><polygon points='60,30 88,8 88,18 120,18 120,42 88,42 88,52' fill='%23DDA003'/></svg>");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom right;
-  opacity: 0.1;
-  pointer-events: none;
+  background-image: none;
 }
 
 /* FAQ rhythmic cut masks */
@@ -159,12 +120,10 @@
 
 /* Variants for pattern-border-top color logic */
 .pattern-border-top.light-bg::before {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 40'><rect width='240' height='40' fill='none'/><polygon points='0,20 24,6 24,12 120,12 120,28 24,28 24,34' fill='%23840032'/><polygon points='120,20 144,6 144,12 240,12 240,28 144,28 144,34' fill='%23840032'/></svg>");
-  opacity: 0.12;
+  content: none;
 }
 .pattern-border-top.dark-bg::before {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 40'><rect width='240' height='40' fill='none'/><polygon points='0,20 24,6 24,12 120,12 120,28 24,28 24,34' fill='%23E59500'/><polygon points='120,20 144,6 144,12 240,12 240,28 144,28 144,34' fill='%23E59500'/></svg>");
-  opacity: 0.10;
+  content: none;
 }
 
 /* Ensure proper z-index layering */

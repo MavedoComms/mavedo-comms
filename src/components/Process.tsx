@@ -6,7 +6,7 @@ export default function Process() {
 
   return (
     <motion.section className="process-section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
-      <div className="container">
+      <div>
         <div className="process-header">
         <h2 className="font-heading">{processData.heading}</h2>
         <p className="section-intro">

@@ -10,15 +10,15 @@ export default function Contact() {
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.4 }}
     >
-      <section id="contact" className="section">
+      <section id="contact" className="section contact-section">
         {/* Preserve old anchor for existing links */}
         <div id="quick-contact" style={{ height: 0 }} aria-hidden="true"></div>
-        <h1>Contact</h1>
+        <h1 className="font-heading heading-accent">Contact</h1>
         <p className="lead">
           Please fill out the form below and we'll get back to you within one business day.
         </p>
 
-        <div style={{ width: '100%', maxWidth: '800px', margin: '2rem 0' }}>
+        <div className="contact-form-iframe-wrap">
           <iframe
             title="Contact Form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSejtLVkEikPKdDECN_hFLNEMfe1hQZkmRJBAq13adXdB8ziqg/viewform?embedded=true"
